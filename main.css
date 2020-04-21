@@ -1,0 +1,153 @@
+:root {
+    --dark-text-color:rgb(50,50,50);
+    --dark-bg-color:rgb(240,240,240);
+    --royal-navy-blue:#000B3F;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    background-color: #fff;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    min-width: 400px;
+  }
+  
+  body {
+    color:var(--dark-text-color);
+    font-family: chakra-petch,sans-serif;
+  }
+  
+  header {
+    display:flex;
+    justify-content:flex-start;
+    background-color:var(--dark-bg-color);
+  }
+  
+  header h1 {
+    font-size:clamp(1.2rem,4vw,3rem);
+    padding-left:20px;
+  }
+  
+  header sub {
+    font-size:0.5em;
+  }
+  
+  #calculator {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background-color:var(--dark-bg-color);
+    padding:0 30px 30px 30px;
+  }
+
+  .answer-container {
+      display: flex;
+      justify-content: center;
+  }
+
+  .answer {
+      font-size: 4em;
+      font-weight: 900;
+      color:var(--royal-navy-blue);
+      height: 0px;
+      opacity: 0;
+      transition: all 2s linear
+  }
+
+  .answer.show {
+      opacity: 1.0;
+      height: auto;
+  }
+
+  .answer::before {
+    content: "Set wrench to:";
+    margin-right: 20px;
+    font-size: 0.4em;
+  }
+
+  .answer::after {
+      content: "lbsf.in";
+      margin-left: 20px;
+      font-size: 0.4em;
+  }
+  
+  #info {
+    display:flex;
+    justify-content:center;
+  }
+  
+  #info article {
+    width:max(300px,80%);
+  }
+  
+  #info p:first-of-type {
+      text-align: justify;
+  }
+
+  .entry-container {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+  }
+  
+  .button-container {
+    display:flex;
+    justify-content:center;
+    margin-top:20px;
+  }
+  
+  .image-contianer {
+    display:flex;
+    justify-content:center;
+    padding:30px;
+  }
+
+  .image-contianer svg {
+      min-width: 300px;
+  }
+
+  #wrench {
+      animation: wrench 5s ease;
+      animation-iteration-count: infinite;
+      transform-origin: 16% 50%;
+  }
+  
+  @keyframes wrench {
+      0%{
+        transform: rotateZ(0deg);
+      }
+
+      50% {
+        transform: rotateZ(5deg);
+      }
+
+      100% {
+        transform: rotateZ(0deg)
+      }
+  }
+
+
+  main input,button {
+    
+    margin:10px;
+    height:30px;
+    min-width: 200px;
+    border-radius:5px
+  }
+  
+  button {
+    font-weight:900;
+  }
+  
+  
+  @media (max-width:700px) {
+    .entry-container {
+        flex-direction:column;
+     }
+  }
+  
+  
+  
+  

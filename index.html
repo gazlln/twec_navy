@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <html>
+
+        <body>
+          <header>
+            <h1>Torque Wrench Extension Calc <sub>By Gaz Long</sub> </h1>
+          </header>
+      
+          <main>
+      
+            <section id="calculator">
+
+              <div class="answer-container">
+                  <div id="answer" class="answer">Nil</div>
+              </div>
+
+              <div class="image-contianer">
+                <svg width="518" height="119" viewBox="0 0 518 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="Group 2">
+                    <path id="extension" fill-rule="evenodd" clip-rule="evenodd" d="M46.6344 66C43.3397 75.3215 34.4497 82 24 82C10.7452 82 0 71.2548 0 58C0 44.7452 10.7452 34 24 34C34.0721 34 42.6951 40.2045 46.2554 49H114V66H46.6344ZM38.6555 48.75L23.5 40L8.34454 48.75V66.25L23.5 75L38.6555 66.25V48.75ZM16.2499 44.9427H30.7499L37.9999 57.5001L30.7499 70.0575H16.2499L8.99994 57.5001L16.2499 44.9427Z" fill="#C4C4C4"/>
+                    <path id="lo_extension" d="M115.5 96V118H27V96" stroke="#C4C4C4"/>
+                    <path id="lo_wrench" d="M114 28V1H430.5V28" stroke="#C4C4C4"/>
+                    <path id="wrench" fill-rule="evenodd" clip-rule="evenodd" d="M129.928 71C126.17 75.2906 120.651 78 114.5 78C103.178 78 94 68.8218 94 57.5C94 46.1782 103.178 37 114.5 37C120.651 37 126.17 39.7094 129.928 44H342.251C345.342 39.7573 350.349 37 356 37H501C510.389 37 518 44.6112 518 54V61C518 70.3888 510.389 78 501 78H356C350.349 78 345.342 75.2427 342.251 71H129.928Z" fill="#C4C4C4"/>
+                  </g>
+                </svg>
+              </div>
+      
+              <div class="error-container"></div>
+      
+              <div class="entry-container">
+                <input oninput="tf_changed(this)" onfocus="input_focused(this)" id="length-of-wrench" type="number" placeholder="Length of Wrench (cm)">
+                <input oninput="tf_changed(this)" onfocus="input_focused(this)" id="length-of-extension" type="number" placeholder="Length of Extension (cm)">
+                <input oninput="tf_changed(this)" onfocus="input_focused(this)" id="original-torque" type="number" placeholder="Original TQ Value (lbsf.in)">
+              </div>
+              
+            </section>
+      
+            <section id="info">
+              <article>
+              <h1>Why?</h1>
+              <p>When you put an extension on a torque wrench (e.g. a crow foot or a dog bone) the torque applied to the fastener increases as the lever arm extends. The calculator will work out what value you should set into the wrench to achieve the required fastener torque. The following formula has been used:</p>
+      
+              <p><em>M1 = M2 x L1 / L2</em></p>
+
+              <p>Where:</p>
+      
+              <p><strong>M1</strong> is the torque setting of the wrench</p>
+              <p><strong>M2</strong> is the actual torque applied to the nut</p>
+              <p><strong>L1</strong> is the normal length of the wrench</p>
+              <p><strong>L2</strong> is the extended length of the wrench</p>
+              </article>
+            </section>
+          
+          </main>
+      
+        </body>
+      
+      
+      <script src="main.js"></script>
+      
+      </html>
+
+    
+</body>
+</html>
